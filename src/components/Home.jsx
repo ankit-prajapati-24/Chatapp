@@ -14,7 +14,7 @@ import { IoMdLogOut } from "react-icons/io";
 import { setNightmode, setuserdata, setWallpaper } from '../slices/UserDataSlice';
 import { apiConnecter } from './services/apiconnecter';
 import { BsFillPeopleFill, BsPeople } from "react-icons/bs";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Settings from './Settings';
 // import { setuserdata } from "../slices/UserDataSlice"; 
 const Home = () => {
@@ -44,19 +44,21 @@ const Home = () => {
     }
   }
   
-  useEffect(async () => {
-    socketInstance = await io('https://chatsapp-server-5.onrender.com');
+  useEffect( () => {
+    socketInstance =  io('https://chatsapp-server-5.onrender.com');
     
     console.log('current socket', socketInstance);
     setSocket(socketInstance);
     console.log('current socket id', socketInstance.id);
-    return () => {
-      socketInstance.disconnect();
-    };
+    // return () => {
+    //   socketInstance.disconnect();
+    // };
   }, [dispatch,socketInstance]);
 
   
-
+  function gologin(){
+    navigate("/Login")
+  }
   
   const onSetSidebarOpen = (open) => {
     setSidebarOpen(open);
@@ -147,13 +149,15 @@ const Home = () => {
               </div>
               <button>Settings</button>
             </div>
-            <div className='flex  items-center gap-4  text-lg  w-full py-1 m-1  rounded-md font-semibold' onClick={() => {navigate("/Login")}}>
+            <div className='flex  items-center gap-4  text-lg  w-full py-1 m-1  rounded-md font-semibold' onClick={gologin}>
               {/* <IoSettings  size={25}/> */}
               <div className="bg-purple-500 p-[2px] rounded-md">
                 <IoMdLogOut size={22} backgroundColor="white" color="white" className="" />
               </div>
               <button>Logout</button>
             </div>
+          
+
           </div>
           <input type='file' ref={fileInputRef} style={{ display: 'none' }} onChange={handleFileChange} />
           <div className="absolute bottom-0    p-4 rounded-md shadow-md">

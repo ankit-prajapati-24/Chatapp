@@ -168,6 +168,7 @@ code {
     #00ffff,
     #ffffff
   );
+}
 
   ::-webkit-scrollbar {
     display: none;
@@ -177,6 +178,7 @@ code {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
 }
+.shining-text{
   background-size: 200%;
   background-clip: text;
   color: transparent;

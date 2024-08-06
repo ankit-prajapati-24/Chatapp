@@ -193,7 +193,7 @@ const Chat = ({ socket }) => {
     return (
         <>
             {currentPartner ? (
-                <div className={`flex flex-col py-2  h-full  w-full mx-auto rounded-lg shadow-lg ${bgColor} ${textColor}  `}>
+                <div className={`container flex flex-col py-2  h-full  w-full mx-auto rounded-lg shadow-lg ${bgColor} ${textColor}  `}>
                 {/* <div className={`flex flex-col py-2  h-full  w-full mx-auto rounded-lg shadow-lg ${nightmode ? "bg-[#1a202c] text-white" : "bg-white text-gray-900"}`}> */}
                 {/* <div className={`flex flex-col py-2  h-full  w-full mx-auto rounded-lg shadow-lg ${bgColor} ${bgColor}`} > */}
                     {/* Header */}

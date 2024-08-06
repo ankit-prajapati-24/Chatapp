@@ -20,7 +20,7 @@ function App() {
   // document.body.style.backgroundColor  = 'Black';
   
   const socketInstance = io('https://chatsapp-server-5.onrender.com');
-  return ( <div className={` custom-scrollbar  ${nightmode ? "bg-gray-900  text-white":" bg-gray-100 text-gray-900"}`}
+  return ( <div className={`h-screen custom-scrollbar  ${nightmode ? "bg-gray-900  text-white":" bg-gray-100 text-gray-900"}`}
        
     // style={{ backgroundImage: 'url(https://wallpapercave.com/wp/wp9764093.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
     // style={{ backgroundImage: 'url(https://i0.wp.com/demishia.com/wp-content/uploads/2018/04/admin-login-background-images-8.jpg?resize=768%2C432&ssl=1)', backgroundSize: 'cover', backgroundPosition: 'center' }}

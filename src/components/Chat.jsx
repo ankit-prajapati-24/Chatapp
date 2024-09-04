@@ -193,7 +193,7 @@ const Chat = ({ socket }) => {
     return (
         <>
             {currentPartner ? (
-                <div className={`container flex flex-col py-2  h-full  w-full mx-auto rounded-lg shadow-lg ${bgColor} ${textColor}  `}>
+                <div className={`container flex flex-col py-2  h-full  w-full mx-auto  shadow-lg ${bgColor} ${textColor}  `}>
                 {/* <div className={`flex flex-col py-2  h-full  w-full mx-auto rounded-lg shadow-lg ${nightmode ? "bg-[#1a202c] text-white" : "bg-white text-gray-900"}`}> */}
                 {/* <div className={`flex flex-col py-2  h-full  w-full mx-auto rounded-lg shadow-lg ${bgColor} ${bgColor}`} > */}
                     {/* Header */}
@@ -269,7 +269,7 @@ const Chat = ({ socket }) => {
                         </div>
                         <Sheet.Backdrop />
                     </Sheet>
-                    <div className={` flex rounded-md items-center p-2 ${nightmode ? "bg-[#1a202c] text-white" : "bg-white text-gray-900"} bg-${bgColor}-500  text-${textColor}-100`}>
+                    <div className={` fixed top-0 w-full flex rounded-md items-center  p-2 ${nightmode ? "bg-[#1a202c] text-white" : "bg-white text-gray-900"} bg-${bgColor}-500  text-${textColor}-100`}>
                         <img
                             src={currentPartner.image}
                             alt="User"
@@ -287,7 +287,7 @@ const Chat = ({ socket }) => {
                            style={{ backgroundImage: `url(${wallpaper})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
 
                         // className={`flex-1 p-2 flex-col  overflow-y-auto overflow-x-hidden items-center ${nightmode ? "bg-gray-900 text-white" : "bg-gray-200 text-gray-900"} ${bgColor} ${textColor}`}>
-                        className={`flex-1 p-2 flex-col  overflow-y-auto overflow-x-hidden items-center  bg-${bgColor}-400 ${textColor}`}>
+                        className={`mt-[50px] flex-1 p-2 flex-col  overflow-y-auto overflow-x-hidden items-center  bg-${bgColor}-400 ${textColor}`}>
                         {messages.map((msg, index) => (
                             <div
                                 key={index}
@@ -323,7 +323,7 @@ const Chat = ({ socket }) => {
 
                     {/* Input Area */}
                     {/* <div className={` ${nightmode ? "bg-[#1a202c]" : "bg-gray-100"}  flex items-center p-1 `}> */}
-                    <div className={` bg-${bgColor}-500  flex items-center p-1 `}>
+                    <div className={`fixed bottom-1 w-full bg-${bgColor}-500  flex items-center  rounded-md border border-black `}>
                         <input type='file' ref={inputref} className='hidden' onChange={handleFileChange}></input>
                         <div className='absolute p-2 ' onClick={clickhandler} >
                             <FaCamera />
@@ -334,7 +334,7 @@ const Chat = ({ socket }) => {
                             onChange={(e) => setMessage(e.target.value)}
                             placeholder="Type a message"
                             // className={`block w-full p-2 ps-10 text-sm  outline-none rounded-lg bg-gray-20 ${nightmode ? "placeholder:bg-[#1a202c] bg-[#1a202c] text-white" : "bg-gray-300 placeholder:bg-gray-300 text-gray-900"} mr-1`}
-                            className={`block w-full p-2 ps-10 text-sm  outline-none rounded-lg ${nightmode ? "placeholder:bg-[#1a202c] bg-[#1a202c] text-white" : "bg-gray-300 placeholder:bg-gray-300 text-gray-900"}   placeholder:bg-${bgColor}-500 bg-${bgColor}-500 ${textColor} mr-1`}
+                            className={`block w-full p-4 ps-10 text-sm  outline-none  ${nightmode ? "placeholder:bg-[#1a202c] bg-[#1a202c] text-white" : "bg-gray-300 placeholder:bg-gray-300 text-gray-900"}   placeholder:bg-${bgColor}-500 bg-${bgColor}-500 ${textColor} mr-1`}
                             onKeyDown={handleKeyDown}
                             autoFocus
                             onFocus={(e)=> e.target.scrollIntoView({ behavior: "smooth" })}

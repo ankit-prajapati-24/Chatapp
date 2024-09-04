@@ -115,7 +115,7 @@ export const Connections = ({ socket, sidebarOpen, onSetSidebarOpen }) => {
                             <span className="text-lg font-medium">{person.name}</span>
                             <span className="text-sm text-gray-400">{lastMessages[person._id]?.date || ""}</span>
                         </div>
-                        <div className="text-sm text-gray-400">{lastMessages[person._id]?.MessageText.slice(0,60) || ""}</div>
+                        <div className="text-sm text-gray-400">{lastMessages[person._id]?.MessageText || ""}</div>
                         {lastMessages[person._id]?.date && !lastMessages[person._id]?.MessageText && (
                             <div className="flex items-center">
                                 <LuImage />

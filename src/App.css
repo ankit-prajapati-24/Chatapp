@@ -99,25 +99,6 @@
 }
 /* styles.css */
 
-@keyframes shine {
-  0% {
-    background-position: -200%;
-  }
-  100% {
-    background-position: 200%;
-  }
-}
-
-.shining-text {
-  font-size: 2rem;
-  font-weight: bold;
-  background: linear-gradient(
-    to right,
-    #ffffff,
-    #ff00ff,
-    #00ffff,
-    #ffffff
-  );
 
   ::-webkit-scrollbar {
     display: none;
@@ -127,16 +108,9 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
 }
-  background-size: 200%;
-  background-clip: text;
-  color: transparent;
-  animation: shine 5s linear infinite;
-  font-family: "Edu AU VIC WA NT Hand", cursive;
-  font-optical-sizing: auto;
+ 
   /* font-weight: <weight>; */
   /* font-style: normal; */
-
-}
 
 /* styles.css */
 .custom-sheet-wrapper {
@@ -331,6 +305,16 @@ code {
   );
 }
 
+.shining-text{
+  background-size: 200%;
+  background-clip: text;
+  color: transparent;
+  animation: shine 5s linear infinite;
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  /* font-style: normal; */
+}
   ::-webkit-scrollbar {
     display: none;
 }
@@ -342,13 +326,13 @@ code {
 .shining-text{
   background-size: 200%;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   animation: shine 5s linear infinite;
   font-family: "Edu AU VIC WA NT Hand", cursive;
   font-optical-sizing: auto;
   /* font-weight: <weight>; */
   /* font-style: normal; */
-
 }
 
 /* styles.css */

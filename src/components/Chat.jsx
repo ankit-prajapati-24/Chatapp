@@ -284,7 +284,7 @@ const Chat = ({ socket }) => {
 
                         //   style={{ backgroundImage: 'url(https://wallpapercave.com/wp/wp4410779.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}
                        
-                        //    style={{ backgroundImage: `url(${wallpaper})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                           style={{ backgroundImage: `url(${wallpaper})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
 
                         // className={`flex-1 p-2 flex-col  overflow-y-auto overflow-x-hidden items-center ${nightmode ? "bg-gray-900 text-white" : "bg-gray-200 text-gray-900"} ${bgColor} ${textColor}`}>
                         className={`flex-1 p-2 flex-col  overflow-y-auto overflow-x-hidden items-center  bg-${bgColor}-400 ${textColor}`}>

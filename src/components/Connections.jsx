@@ -79,7 +79,7 @@ export const Connections = ({ socket, sidebarOpen, onSetSidebarOpen }) => {
                 <button className="mb-4 mr-2" onClick={() => onSetSidebarOpen(true)}>
                     <FontAwesomeIcon icon={faBars} size="xl" />
                 </button>
-                <h2 className="text-4xl font-italic mb-4 text-black shining-text text-start">Chatsapp</h2>
+                <h2 className="text-4xl font-italic mb-4  shining-text text-start">Chatsapp</h2>
             </div>
             <div className='flex gap-2 items-center justify-center'>
                 <form className='w-full mb-3'>

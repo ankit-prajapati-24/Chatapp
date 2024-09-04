@@ -43,7 +43,7 @@ const ForgotPassword = () => {
       <LoadingBar color="red" ref={ref} />
       <Toaster />
       <div className="p-8 rounded-lg shadow-lg bg-[#1a202c] ring-2 ring-[#1a202c] w-80 transform transition-transform duration-500 hover:scale-105">
-        <h2 className="text-4xl font-italic mb-4 text-center text-black shining-text">Chatsapp</h2>
+        <h2 className="text-4xl font-italic mb-4 text-center  shining-text">Chatsapp</h2>
         <form onSubmit={handleSubmit(SubmitHandler)}>
           <div className="mb-4">
             <label htmlFor="number" className="block text-left text-white font-semibold mb-2">Number</label>

@@ -69,7 +69,7 @@ const VerifyOtp = () => {
     <div className="min-h-screen flex items-center justify-center bg-[#1a202c]">
       <LoadingBar color="red" ref={ref} />
       <div className="bg-[#1a202c] shadow-lg p-6 rounded-lg flex items-center justify-center flex-col mx-auto">
-        <h2 className="text-4xl font-italic mb-4 text-center text-white shining-text">Chatsapp</h2>
+        <h2 className="text-4xl font-italic mb-4 text-center  shining-text">Chatsapp</h2>
         <p className="text-3xl font-semibold mb-6 text-center text-gray-500 overflow-visible">Enter 6-Digit OTP</p>
         <form onSubmit={handleVerifyAndSignup} className="flex items-center justify-center flex-col">
           <OtpInput
